@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Catálogo de plantas medicinales, aromáticas y de flor de Natura &amp; Home, separadas por tipo.">
+  <meta name="theme-color" content="#24421f">
+  <title>Catálogo | Natura &amp; Home</title>
+  <link rel="icon" href="assets/icons/favicon.png">
+
+  <!-- Estilos: de lo general a lo particular (el orden importa) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/animaciones.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- El anuncio, el encabezado con el menú y el pie de página los dibuja js/estructura.js
+       (así el menú se cambia en un solo lugar y se ve igual en todas las páginas). -->
+
+  <main>
+    <!-- Título de la página -->
+    <header class="phead">
+      <div class="wrap">
+        <h1 data-in>Catálogo de plantas</h1>
+        <p data-in style="--d:1">Busca, filtra y agrega al pedido. Los precios y la disponibilidad se confirman por WhatsApp.</p>
+      </div>
+    </header>
+
+    <!-- Filtros: tipo, lugar, búsqueda, orden y disponibilidad -->
+    <section class="cbar" aria-label="Filtros del catálogo">
+      <div class="wrap">
+        <div class="pills tipos" id="pills" aria-label="Tipo de planta"></div>
+        <div class="ctools">
+          <input class="search" id="q" type="search" placeholder="Buscar planta" aria-label="Buscar planta">
+          <div class="pills" id="places" aria-label="Lugar"></div>
+          <select class="sel" id="sort" aria-label="Ordenar">
+            <option value="">Orden: destacadas</option>
+            <option value="az">Nombre A–Z</option>
+            <option value="precio">Precio menor</option>
+            <option value="disp">Disponibles primero</option>
+          </select>
+          <label class="chk"><input type="checkbox" id="onlyAvail"> Solo disponibles</label>
+          <button class="linkbtn" id="clearF" hidden>Limpiar filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plantas separadas por tipo (las dibuja js/paginas.js) -->
+    <section class="sec sec-top-sm">
+      <div class="wrap">
+        <p class="count" id="count" aria-live="polite"></p>
+        <div id="catalog"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts: cada uno usa al anterior (el orden importa) -->
+  <script src="js/datos.js"></script>
+  <script src="js/utilidades.js"></script>
+  <script src="js/estructura.js"></script>
+  <script src="js/animaciones.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/comprobante.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/paginas.js"></script>
+  <script src="js/principal.js"></script>
+</body>
+</html>

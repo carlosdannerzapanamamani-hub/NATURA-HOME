@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cómo hacer tu pedido en Natura &amp; Home: explora, elige y confirma por WhatsApp.">
+  <meta name="theme-color" content="#24421f">
+  <title>Cómo comprar | Natura &amp; Home</title>
+  <link rel="icon" href="assets/icons/favicon.png">
+
+  <!-- Estilos: de lo general a lo particular (el orden importa) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/animaciones.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- El anuncio, el encabezado con el menú y el pie de página los dibuja js/estructura.js
+       (así el menú se cambia en un solo lugar y se ve igual en todas las páginas). -->
+
+  <main>
+    <!-- Título de la página -->
+    <header class="phead">
+      <div class="wrap">
+        <h1 data-in>Así de fácil es empezar</h1>
+        <p data-in style="--d:1">Sin registros ni pagos en línea: armas tu pedido y lo confirmas directo con nosotros.</p>
+      </div>
+    </header>
+
+    <!-- Pasos y preguntas frecuentes -->
+    <section class="sec">
+      <div class="wrap">
+        <ol class="steps">
+          <li class="st"><b>1</b><h3>Explora</h3><p>Conoce nuestras plantas disponibles en el catálogo.</p></li>
+          <li class="st"><b>2</b><h3>Elige</h3><p>Agrega al pedido las plantas que deseas.</p></li>
+          <li class="st"><b>3</b><h3>Confirma</h3><p>Envía tu pedido por WhatsApp y confirma disponibilidad, precio y entrega.</p></li>
+        </ol>
+
+        <div class="head head-spaced-lg"><h2>Preguntas frecuentes</h2></div>
+        <div class="faq">
+          <details>
+            <summary>¿Cómo pago?</summary>
+            <p>El precio y la forma de pago se coordinan por WhatsApp al confirmar tu pedido. La página no procesa pagos.</p>
+          </details>
+          <details>
+            <summary>¿Hacen envíos?</summary>
+            <p>Puedes elegir recojo en Bella Vista o coordinar un envío dentro de El Alto.</p>
+          </details>
+          <details>
+            <summary>¿Los precios están en la página?</summary>
+            <p>Algunas plantas muestran precio y otras dicen «por confirmar». En ambos casos confirmamos el monto final por WhatsApp.</p>
+          </details>
+          <details>
+            <summary>¿Cuándo atienden?</summary>
+            <p data-s="hours"></p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Invitación final -->
+    <section class="sec">
+      <div class="wrap">
+        <div class="cta">
+          <h2>¿Listo para elegir?</h2>
+          <p>Empieza por el catálogo.</p>
+          <div class="acts"><a class="btn" href="catalogo.html">Explorar plantas</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts: cada uno usa al anterior (el orden importa) -->
+  <script src="js/datos.js"></script>
+  <script src="js/utilidades.js"></script>
+  <script src="js/estructura.js"></script>
+  <script src="js/animaciones.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/comprobante.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/paginas.js"></script>
+  <script src="js/principal.js"></script>
+</body>
+</html>

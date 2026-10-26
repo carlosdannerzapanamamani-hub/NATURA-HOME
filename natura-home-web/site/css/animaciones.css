@@ -1,0 +1,63 @@
+/* ============================================================
+   ANIMACIONES.CSS
+   Aquí están los @keyframes (el "guion" de cada movimiento) y la
+   entrada suave al hacer scroll. Dónde se usa cada animación:
+     slow  → fondo de la portada y animación lenta (layout.css, .hero::before)
+     in    → entrada del título de la portada (layout.css, .hero [data-in])
+     pop   → aparición del sello (layout.css, .seal)
+     spin  → giro del texto del sello (layout.css, .seal svg)
+     rise  → entrada de productos en el carrito (componentes.css, .ci)
+   Las animaciones se desactivan si la persona pidió "reducir
+   movimiento" (ver responsive.css).
+
+   Contenido:
+   1. Guiones de animación (@keyframes)
+   2. Aparecer al hacer scroll (lo activa js/animaciones.js)
+   ============================================================ */
+
+/* ---------- Guiones de animación (@keyframes) ---------- */
+@keyframes slow {
+  to {
+    transform: scale(1.14) translate(-1.5%,-1%);
+  }
+}
+
+@keyframes in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(.92);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+/* ---------- Aparecer al hacer scroll (lo activa js/animaciones.js) ---------- */
+.js [data-r] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 520ms var(--out),transform 520ms var(--out);
+  transition-delay: calc(var(--i,0)*60ms);
+}
+
+.js [data-r].in {
+  opacity: 1;
+  transform: none;
+}

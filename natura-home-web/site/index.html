@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Natura &amp; Home: plantas medicinales, aromáticas y de flor en El Alto, Bolivia. Pide por WhatsApp.">
+  <meta name="theme-color" content="#24421f">
+  <title>Plantas en El Alto | Natura &amp; Home</title>
+  <link rel="icon" href="assets/icons/favicon.png">
+
+  <!-- Estilos: de lo general a lo particular (el orden importa) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/animaciones.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- El anuncio, el encabezado con el menú y el pie de página los dibuja js/estructura.js
+       (así el menú se cambia en un solo lugar y se ve igual en todas las páginas). -->
+
+  <main>
+    <!-- Portada: título, botones y sello giratorio -->
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <h1 data-in>Ajenjo, romero, rosas y geranios para tu casa</h1>
+          <p data-in style="--d:1">Elige en el catálogo y confirma tu pedido por WhatsApp. Atendemos en Bella Vista, El Alto.</p>
+          <div class="acts" data-in style="--d:2">
+            <a class="btn gold" href="catalogo.html">Ver catálogo</a>
+            <a class="btn light" data-wa="Hola Natura &amp; Home, quisiera información sobre sus plantas.">Pedir por WhatsApp</a>
+          </div>
+        </div>
+        <div class="seal">
+          <svg viewBox="0 0 400 400" aria-hidden="true">
+            <defs><path id="ring" d="M200,200 m-166,0 a166,166 0 1,1 332,0 a166,166 0 1,1 -332,0"/></defs>
+            <text><textPath href="#ring" textLength="1035" lengthAdjust="spacing">NATURA &amp; HOME • BIENESTAR • DECO • ESENCIA • EL ALTO • </textPath></text>
+          </svg>
+          <img src="assets/logo-mark.webp" alt="Logo de Natura &amp; Home: un árbol con una casa">
+        </div>
+      </div>
+    </section>
+
+    <!-- Plantas destacadas (las dibuja js/paginas.js) -->
+    <section class="sec">
+      <div class="wrap">
+        <div class="head row2">
+          <div>
+            <h2>Plantas destacadas</h2>
+            <p class="lead">Una muestra de lo que tenemos hoy.</p>
+          </div>
+          <a class="tl" href="catalogo.html">Ver todo el catálogo</a>
+        </div>
+        <div class="grid g4 pgrid" id="featured"></div>
+      </div>
+    </section>
+
+    <!-- Tipos de planta y lugares (los dibuja js/paginas.js desde los tipos del panel) -->
+    <section class="sec sec-flush">
+      <div class="wrap">
+        <div class="head"><h2>Elige por tipo de planta</h2></div>
+        <nav id="typeRows" aria-label="Tipos de planta"></nav>
+        <div class="places">
+          <span>¿Buscas por lugar?</span>
+          <div class="pills" id="placeLinks"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ventajas -->
+    <section class="band sec">
+      <div class="wrap why">
+        <h2>Pedir una planta tiene que ser fácil</h2>
+        <ul>
+          <li><b>Plantas frescas</b><span>Recibe tus plantas listas para formar parte de tu hogar.</span></li>
+          <li><b>Compra sencilla</b><span>Explora el catálogo y realiza tu pedido de manera rápida.</span></li>
+          <li><b>Atención directa</b><span>Hablas directamente con Natura &amp; Home por WhatsApp.</span></li>
+          <li><b>Guía de cuidados</b><span>Luz y riego básicos para cada planta, en la página de cuidados.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pasos para pedir -->
+    <section class="sec">
+      <div class="wrap">
+        <div class="head"><h2>Cómo hacer tu pedido</h2></div>
+        <ol class="steps">
+          <li class="st"><b>1</b><h3>Explora</h3><p>Conoce nuestras plantas disponibles.</p></li>
+          <li class="st"><b>2</b><h3>Elige</h3><p>Agrega al pedido las plantas que quieres.</p></li>
+          <li class="st"><b>3</b><h3>Confirma</h3><p>Envía el pedido por WhatsApp y coordina la entrega.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Invitación final -->
+    <section class="sec">
+      <div class="wrap">
+        <div class="cta">
+          <h2>Lleva un poco de naturaleza a casa</h2>
+          <p>Explora las colecciones y encuentra tu planta favorita.</p>
+          <div class="acts"><a class="btn" href="catalogo.html">Ver catálogo</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts: cada uno usa al anterior (el orden importa) -->
+  <script src="js/datos.js"></script>
+  <script src="js/utilidades.js"></script>
+  <script src="js/estructura.js"></script>
+  <script src="js/animaciones.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/comprobante.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/paginas.js"></script>
+  <script src="js/principal.js"></script>
+</body>
+</html>

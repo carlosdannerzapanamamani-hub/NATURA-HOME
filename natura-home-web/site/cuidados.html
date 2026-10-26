@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Guía básica de luz y riego para tus plantas de Natura &amp; Home.">
+  <meta name="theme-color" content="#24421f">
+  <title>Cuidados | Natura &amp; Home</title>
+  <link rel="icon" href="assets/icons/favicon.png">
+
+  <!-- Estilos: de lo general a lo particular (el orden importa) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/animaciones.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- El anuncio, el encabezado con el menú y el pie de página los dibuja js/estructura.js
+       (así el menú se cambia en un solo lugar y se ve igual en todas las páginas). -->
+
+  <main>
+    <!-- Título de la página -->
+    <header class="phead">
+      <div class="wrap">
+        <h1 data-in>Cuida tus plantas</h1>
+        <p data-in style="--d:1">Luz y riego básicos para cada planta. Si tienes dudas, escríbenos por WhatsApp.</p>
+      </div>
+    </header>
+
+    <!-- Una tarjeta por planta, separadas por tipo (las dibuja js/paginas.js) -->
+    <section class="sec">
+      <div class="wrap">
+        <div id="careList"></div>
+
+        <!-- Preguntas frecuentes -->
+        <div class="head head-spaced"><h2>Lo esencial</h2></div>
+        <div class="faq">
+          <details>
+            <summary>¿Cada cuánto debo regar?</summary>
+            <p>Riega cuando la tierra superficial esté seca al tacto. En El Alto el clima es frío y seco: mejor regar poco y con frecuencia moderada que encharcar la maceta.</p>
+          </details>
+          <details>
+            <summary>¿Qué hago si hay helada?</summary>
+            <p>Las noches frías pueden dañar algunas plantas. Si hay riesgo de helada, acércalas a una pared o protégelas dentro de casa durante la noche.</p>
+          </details>
+          <details>
+            <summary>¿La maceta necesita drenaje?</summary>
+            <p>Sí. Los agujeros en la base evitan que el agua se acumule y que las raíces se pudran.</p>
+          </details>
+          <details>
+            <summary>¿Puedo consultar por una planta específica?</summary>
+            <p>Claro. Escríbenos por WhatsApp y te orientamos con los cuidados de la planta que elijas.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts: cada uno usa al anterior (el orden importa) -->
+  <script src="js/datos.js"></script>
+  <script src="js/utilidades.js"></script>
+  <script src="js/estructura.js"></script>
+  <script src="js/animaciones.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/comprobante.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/paginas.js"></script>
+  <script src="js/principal.js"></script>
+</body>
+</html>

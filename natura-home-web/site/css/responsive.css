@@ -1,0 +1,159 @@
+/* ============================================================
+   RESPONSIVE.CSS
+   Adapta el diseño a tablet y celular (@media max-width) y respeta "reducir movimiento".
+   Se carga al final para poder sobrescribir las reglas anteriores. Orden de carga: base → layout → componentes → responsive.
+
+   Contenido:
+   1. General
+   2. Catálogo en pantallas grandes: barra fija bajo el menú
+   ============================================================ */
+
+/* ---------- General ---------- */
+@media (max-width:900px) {
+  .g4, .g3 {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .hero .wrap {
+    grid-template-columns: 1fr;
+    padding-block: 56px 72px;
+  }
+  .seal {
+    width: 220px;
+    justify-self: start;
+    margin-top: 8px;
+  }
+  .why {
+    grid-template-columns: 1fr;
+  }
+  .why h2 {
+    position: static;
+  }
+  .ftr .wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+  .mbox {
+    grid-template-columns: 1fr;
+  }
+  .gal {
+    min-height: 260px;
+    margin: 14px 14px 0;
+  }
+  .rl {
+    grid-template-columns: 1fr auto;
+  }
+  .rl p {
+    display: none;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:760px) {
+  .burger {
+    display: block;
+  }
+  .nav {
+    position: fixed;
+    inset: 74px 0 auto 0;
+    background: var(--cream);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 5%;
+    border-bottom: 1px solid var(--line);
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 180ms ease,transform 220ms var(--out);
+  }
+  .nav.on {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+  }
+  .nav a {
+    padding: 14px;
+  }
+  .nav a::after {
+    display: none;
+  }
+  .cart-btn span {
+    display: none;
+  }
+  .wa b {
+    display: none;
+  }
+  .wa {
+    padding: 16px;
+  }
+  .why li, .vals li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .dl>div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .hero, .phead {
+    border-radius: 0 0 32px 32px;
+  }
+  .band {
+    border-radius: 32px;
+  }
+  .ftr {
+    border-radius: 32px 32px 0 0;
+  }
+}
+
+@media (max-width:560px) {
+  .g3, .g2 {
+    grid-template-columns: 1fr;
+  }
+  .grid.pgrid {
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px 12px;
+  }
+  .pbody {
+    padding: 0;
+  }
+  .pbody p {
+    display: none;
+  }
+  .ftr .wrap {
+    grid-template-columns: 1fr;
+  }
+  .care {
+    grid-template-columns: 1fr;
+  }
+  .prow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta {
+    border-radius: 160px 160px 28px 28px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  *, *::before, *::after {
+    animation: none!important;
+    scroll-behavior: auto!important;
+  }
+  .js [data-r] {
+    transform: none;
+    transition: opacity 200ms ease;
+  }
+  .drawer, .mbox, .toast {
+    transition-duration: 1ms;
+  }
+}
+
+/* ---------- Catálogo en pantallas grandes: barra fija bajo el menú ---------- */
+@media (min-width: 761px) {
+  .cbar { position: sticky; top: 74px; }
+}
+
+@media (max-width: 760px) {
+  .ctools .search { max-width: none; flex: 1 1 100%; }
+  .thead { align-items: start; }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#24421f">
+  <title>Administración | Natura &amp; Home</title>
+  <link rel="icon" href="assets/icons/favicon.png">
+
+  <!-- Estilos: de lo general a lo particular (el orden importa) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/animaciones.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <!-- 1. Pantalla de acceso (js/admin.js la oculta cuando la contraseña es correcta) -->
+  <div class="lg" id="login">
+    <form class="card lgbox" id="lf">
+      <img src="assets/logo-mark.webp" alt="">
+      <h1 class="lg-title">Panel de administración</h1>
+      <p class="hint lg-sub">Acceso solo para Natura &amp; Home</p>
+      <div class="field">
+        <label for="pw">Contraseña</label>
+        <input id="pw" type="password" autocomplete="current-password" required>
+      </div>
+      <p id="le" role="alert"></p>
+      <button class="btn btn-block">Entrar</button>
+      <a class="lg-back" href="index.html">← Volver a la tienda</a>
+    </form>
+  </div>
+
+  <!-- 2. Panel: menú lateral + contenido (js/admin.js dibuja cada pestaña dentro de #view) -->
+  <div class="app" id="app" hidden>
+    <aside class="side">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-mark.webp" alt="" width="46" height="46">
+        <span><b>Natura &amp; Home</b><small>Administración</small></span>
+      </a>
+      <nav class="side-nav" aria-label="Secciones del panel">
+        <button class="tab" data-t="dash" aria-selected="true">Resumen</button>
+        <button class="tab" data-t="prod" aria-selected="false">Productos</button>
+        <button class="tab" data-t="tipos" aria-selected="false">Tipos</button>
+        <button class="tab" data-t="ord" aria-selected="false">Pedidos</button>
+        <button class="tab" data-t="cfg" aria-selected="false">Ajustes</button>
+      </nav>
+      <button class="tab" id="out">Salir</button>
+    </aside>
+    <main class="main" id="view"></main>
+  </div>
+
+  <!-- 3. Ventana emergente (formularios y detalle de pedido) y aviso flotante -->
+  <div class="modal" id="modal"><div class="mbox ad" id="mbox"></div></div>
+  <div class="toast" id="toast" role="status"></div>
+
+  <!-- Scripts: datos.js primero porque los demás usan sus funciones -->
+  <script src="js/datos.js"></script>
+  <script src="js/comprobante.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

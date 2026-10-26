@@ -1,0 +1,215 @@
+/* ============================================================
+   BASE.CSS
+   Lo más general: colores (variables), tipografía, espacios y botones.
+   Para cambiar los COLORES de toda la página, edita las variables en :root (arriba).
+
+   Contenido:
+   1. Variables, reseteo y tipografía
+   2. Botones
+   ============================================================ */
+
+/* ---------- Variables, reseteo y tipografía ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Young+Serif&display=swap');
+
+:root {
+  --g900: #16291a;
+  --g800: #24421f;
+  --g600: #4d7a2b;
+  --g400: #9bbd5a;
+  --g100: #e1e9cf;
+  --gold: #c8a45a;
+  --cream: #eef1e3;
+  --paper: #f8f9f1;
+  --ink: #18221a;
+  --muted: #55624c;
+  --line: #d9dfc6;
+  --r: 22px;
+  --out: cubic-bezier(.23,1,.32,1);
+  --drawer: cubic-bezier(.32,.72,0,1);
+  --serif: 'Young Serif',Georgia,serif;
+  --sans: 'Montserrat',system-ui,sans-serif;
+  --sh: 0 1px 2px rgba(22,41,26,.06),0 10px 28px rgba(22,41,26,.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font: 400 16px/1.7 var(--sans);
+  color: var(--ink);
+  background-color: var(--cream);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .25 0 0 0 0 .32 0 0 0 0 .15 0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  overflow-x: hidden;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -.005em;
+}
+
+h1 {
+  font-size: clamp(2.5rem,6.2vw,4.9rem);
+  line-height: 1.03;
+}
+
+h2 {
+  font-size: clamp(1.9rem,4vw,3rem);
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--g600);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.wrap {
+  width: min(1180px,92%);
+  margin-inline: auto;
+}
+
+.sec {
+  padding: clamp(64px,9vw,112px) 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--g600);
+  margin-bottom: 10px;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 56ch;
+  margin-top: 16px;
+}
+
+.head {
+  margin-bottom: 44px;
+}
+
+.head.row2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tl {
+  font-weight: 600;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 2px;
+  transition: border-color 160ms ease,color 160ms ease;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .tl:hover {
+    color: var(--g600);
+    border-color: var(--g600);
+  }
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 0;
+  font-weight: 600;
+  font-size: .95rem;
+  cursor: pointer;
+  background: var(--g800);
+  color: #fff;
+  transition: transform 160ms var(--out),background-color 160ms ease;
+}
+
+.btn:active {
+  transform: scale(.97);
+}
+
+.btn.light {
+  background: rgba(255,255,255,.12);
+  color: #fff;
+  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.5);
+}
+
+.btn.gold {
+  background: var(--gold);
+  color: var(--g900);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--g800);
+  box-shadow: inset 0 0 0 1.5px var(--g800);
+}
+
+.btn.sm {
+  padding: 10px 18px;
+  font-size: .85rem;
+}
+
+.btn[disabled] {
+  opacity: .45;
+  pointer-events: none;
+}
+
+.acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (hover:hover) and (pointer:fine) {
+  .btn:hover {
+    background: var(--g600);
+  }
+  .btn.light:hover {
+    background: rgba(255,255,255,.24);
+  }
+  .btn.gold:hover {
+    background: #d6b56b;
+  }
+  .btn.ghost:hover {
+    background: var(--g800);
+    color: #fff;
+  }
+}
